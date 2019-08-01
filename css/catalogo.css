@@ -38,7 +38,8 @@ font-weight: bold;
   transform: translate(-50%);
   box-sizing: border-box
   padding: 30px;
-	width: 90%;
+	/*width: 150px;*/
+	
 }
 
 h4{
