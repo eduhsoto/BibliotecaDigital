@@ -5,50 +5,26 @@
       <title>Biblioteca digital</title>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="../css/fontawesome/css/all.css" rel="stylesheet">
     <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/estilo.css">
   </head>
   <body>
-
+<!-- Barra de menú -->
     <nav class="navbar navbar-default navbar-expand-xl navbar-light fixed-top">
       <div class="navbar-header d-flex col">
         <img src="../img/book.ico" alt="logo" style="width:30px;" class="logo">
         <p class="biblioteca">Biblioteca Digital UTIM</p>
       </div>
     </nav>
-<!--
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
-  <div class="container-fluid">
-    <img src="../img/book.ico" alt="logo" style="width:55px;" class="logo">
-    <p class="biblioteca">Biblioteca Digital UTIM</p>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">About</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Portfolio</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Services</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Contact</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>-->
-
-    <header class="header">
-      <div class="color">
-    </header>
-<!-- formulario de registro -->
+    <!-- Imagen  -->
+        <header class="header">
+          <div class="color">
+          </div>
+        </header>
+    <!-- formulario de registro -->
     <div class="container">
       <div class="row justify-content-center" >
         <div class="col-sm-7 col-md-6 col-xs-8 col-lg-5">
@@ -82,7 +58,7 @@
       </div>
     </div>
 
-    <!-- Modal -->
+    <!-- Modal ventana -->
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -150,7 +126,7 @@
             </form>
           </div>
 
-          <!-- Registro para personal de la utim -->
+<!-- Registro para personal de la utim -->
           <div id="personal" class="tab-pane fade">
             <form class="" action="" method="post">
 
@@ -198,8 +174,8 @@
               <div class="form-group">
                 <button type="button" name="button" class="form-control ingresar btn">Registrar</button>
               </div>
-
             </form>
+
           </div>
         </div>
       </div>
@@ -209,6 +185,51 @@
   </div>
 </div>
 
+<!--Icono de administrador -->
+  <a href="#administrador" data-toggle="modal" class="nav-link adminicon"><i class="fas fa-user-cog fa-lg"></i></i></a>
+
+<!-- Modal ventana administrador -->
+
+<div class="modal fade" id="administrador" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header" id="tabs">
+        <ul class="nav nav-tabs nav-fill">
+          <li class="nav-item">
+            <a class="nav-link active" href="#administradorAP" data-toggle="tab" >Bienvenido</a>
+          </li>
+        </ul>
+        <button type="button" class="close " data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="tab-content">
+          <!-- Registro para alumnos -->
+          <div id="administradorAP" class="tab-pane show in active">
+            <form class="" action="" method="">
+              <div class="form-group">
+                <label class="sr-only" for="usuario" >Usuario</label>
+                <input class="form-control" type="text" id="usuario" placeholder="Usuario">
+              </div>
+
+              <div class="form-group">
+                <label class="sr-only" for="password" >Contraseña</label>
+                <input class="form-control" type="password" id="password" placeholder="Contraseña">
+              </div>
+              <div class="form-group">
+                <button type="button" name="button" class="form-control btn btn-success">Ingresar</button>
+              </div>
+            </form>
+          </div>
+
+        </div>
+      </div>
+      <div class="modal-footer">
+      </div>
+    </div>
+  </div>
+</div>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>

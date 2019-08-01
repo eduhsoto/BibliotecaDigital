@@ -1,4 +1,8 @@
 
+body{
+		background: #eeeeee;
+	}
+
 .biblioteca{
 margin: auto;
 color: black;
@@ -9,17 +13,49 @@ text-transform: uppercase;
 font-weight: bold;
 }
 
-body{
-		background: #eeeeee;
-	}
-    .form-inline {
+/* Posisición del formulario*/
+.container{
+  position: absolute;
+  margin-top: 160px;
+  left: 50%;
+  transform: translate(-50%);
+  box-sizing: border-box
+  padding: 30px;
+
+}
+
+.form-container{
+  padding: 30px;
+  background: white;
+	box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+.cabecera{
+  position: absolute;
+  margin-top: 2%;
+  left: 50%;
+  transform: translate(-50%);
+  box-sizing: border-box
+  padding: 30px;
+	width: 90%;
+}
+
+h4{
+  padding: 30px;
+  background: white;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	text-align: center;
+}
+
+.form-inline {
         display: inline-block;
     }
 	.navbar-header.col {
 		padding: 0 !important;
 	}
 	.navbar {
-		background: #fff;
+		background: white;
 		padding-left: 16px;
 		padding-right: 16px;
 		border-bottom: 1px solid #d6d6d6;
@@ -94,16 +130,7 @@ body{
 		vertical-align: middle;
 		margin-top: -2px;
 	}
-	.navbar .badge {
-		background: #f44336;
-		font-size: 11px;
-		border-radius: 20px;
-		position: absolute;
-		min-width: 10px;
-		padding: 4px 6px 0;
-		min-height: 18px;
-		top: 5px;
-	}
+
 	.navbar ul.nav li a.notifications, .navbar ul.nav li a.messages {
 		position: relative;
 		margin-right: 10px;
@@ -117,9 +144,7 @@ body{
 	.navbar a.messages .badge {
 		margin-left: -4px;
 	}
-	.navbar .active a, .navbar .active a:hover, .navbar .active a:focus {
-		background: transparent !important;
-	}
+
 	@media (min-width: 1200px){
 		.form-inline .input-group {
 			width: 300px;
