@@ -138,11 +138,13 @@ h3{
     border-top-right-radius: .25rem;
     color: #eee;
     font-size: 20px;
+
 }
 
 #tabs {
   background-color: #4F94CA;
 }
+
  .nav-tabs {
   border: none;
 }

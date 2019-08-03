@@ -1,12 +1,22 @@
 
-//Para mostrar el formulario de registro de libro
-function ocultarVisualizar(){
-    var form1 = document.getElementById("verInformacion");
-    if(form1.style.display =="block"){
-        form1.style.display = "none"
-    }
-    else
-        if(form1.style.display=="none"){
-            form1.style.display = "block"
-        }
+function iniciarSesionAdmin(){
+  var user = document.getElementById("usuarioAdm").value;
+  var pass = document.getElementById("passwordAdm").value;
+
+  $.ajax({
+      type:"post",
+      url:"http://localhost/crudbiblioteca/iniciar_sesion_admin.php",
+      data:{phpuser:user,phppass:pass},
+      dataType:"jsonp",
+      jsonp:"jsoncallback",
+      crossDomain:true,
+      success:function(resp){
+          if(resp.message=="right")
+              location.href ="../html/crudCatalogo.html";
+          else
+              alert("Usuario o contraseña incorrectos");
+  }
+  });
+  document.getElementById("registroAdmin").reset();
+  return false;
 }
