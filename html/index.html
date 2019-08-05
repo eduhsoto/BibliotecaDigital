@@ -15,7 +15,8 @@
     <link rel="stylesheet" href="../css/estilo.css">
 
   </head>
-  <body>
+  <body >
+
 <!-- Barra de menú -->
     <nav class="navbar navbar-default navbar-expand-xl navbar-light fixed-top">
       <div class="navbar-header d-flex col">
@@ -35,9 +36,8 @@
           <form  action="" method="post" class="form-container">
             <h3 class="text-center">Iniciar Sesión</h3>
 
-            <div class="form-group">
-              <select class="form-control" name="tipo_usuario">
-                <option value=""></option>
+            <div class="form-group" id="options">
+              <select class="form-control" name="tipo_usuario" id="selecti">
               </select>
             </div>
 
@@ -51,7 +51,7 @@
               <input class="form-control" type="password" id="password" placeholder="Contraseña">
             </div>
             <div class="form-group">
-              <button type="button" name="button" class="form-control btn btn-success">Ingresar</button>
+              <button type="button" name="button" class="form-control btn btn-success" onclick="">Ingresar</button>
             </div>
 
             <div class="form-group">
@@ -135,8 +135,7 @@
             <form class="" action="" method="post">
 
               <div class="form-group">
-                <select class="form-control" name="tipo_usuario">
-                  <option value=""></option>
+                <select class="form-control" name="tipo_usuario" id="tipopersonal">
                 </select>
               </div>
 
@@ -176,7 +175,7 @@
               </div>
 
               <div class="form-group">
-                <button type="button" name="button" class="form-control ingresar btn">Registrar</button>
+                <button type="button" name="button" class="form-control btn btn-success">Registrar</button>
               </div>
             </form>
 
@@ -235,7 +234,12 @@
     </div>
   </div>
 </div>
-
+<script type="text/javascript">
+window.onload = function() {
+  btnMostrar();
+  btnMostrarPersonal();
+};
+</script>
 <script src="../js/popper.min.js"></script>
 <script src="../js/jquery-3.4.1.min.js"></script>
 <script src="../js/bootstrap.min.js"></script>
