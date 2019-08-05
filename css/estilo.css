@@ -69,10 +69,6 @@ h3{
     border-color: #14A696;
 }
 
-.ingresar{
-  color: #fff;
-  background-color:  #4F94CA;
-}
 
 .btn{
   font-weight: bold;
@@ -116,12 +112,14 @@ h3{
 /* icon */
 .adminicon{
   color: white;
-  text-decoration: none;
-  background-color: transparent;
   position: fixed;
   bottom: 0;
   right: 0;
 
+}
+
+.{
+  background-color: red;
 }
 
 /* Tabs */
