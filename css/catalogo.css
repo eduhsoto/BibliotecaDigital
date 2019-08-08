@@ -5,7 +5,7 @@ body{
 
 .biblioteca{
 margin: auto;
-color: black;
+color: white;
 margin-left: 1%;
 letter-spacing: 1px;
 font-size: 100%;
@@ -39,7 +39,7 @@ font-weight: bold;
   box-sizing: border-box
   padding: 30px;
 	/*width: 150px;*/
-	
+
 }
 
 h4{
@@ -48,6 +48,20 @@ h4{
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 	text-align: center;
 }
+/* color de los elementos del menú */
+.navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link {
+    color: white;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: white;
+}
+
+.navbar-light .navbar-toggler {
+    /* color: rgba(255,255,255,.5); */
+    border-color: white;
+}
+
 
 .form-inline {
         display: inline-block;
@@ -56,7 +70,7 @@ h4{
 		padding: 0 !important;
 	}
 	.navbar {
-		background: white;
+		background: #4F94C4;
 		padding-left: 16px;
 		padding-right: 16px;
 		border-bottom: 1px solid #d6d6d6;
