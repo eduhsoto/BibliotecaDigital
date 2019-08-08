@@ -2,72 +2,71 @@
 <html lang="en" >
   <head>
     <meta charset="utf-8">
-      <title>Crud catalogo</title>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <title>Crud catalogo</title>
     <link rel="stylesheet" href="../css/fontawesome/css/all.css" rel="stylesheet">
+
     <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="../css/catalogo.css">
+
     <script src="../js/index.js"></script>
+
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="../css/catalogo.css">
   </head>
-  <body>
-    <nav class="navbar navbar-default navbar-expand-xl navbar-light">
-      <div class="navbar-header d-flex col">
-        <img src="../img/book.ico" alt="logo" style="width:30px;" class="logo">
-        <p class="biblioteca">Biblioteca Digital UTIM</p>
-        <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle navbar-toggler ml-auto">
-          <span class="navbar-toggler-icon"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-		</button>
-	</div>
-	<!-- Collection of nav links, forms, and other content for toggling -->
-	<div id="navbarCollapse" class="collapse navbar-collapse justify-content-start">
-		<ul class="nav navbar-nav">
-			<li class="nav-item active"><a href="#" class="nav-link">Inicio</a></li>
-      <li class="nav-item dropdown">
-				<a data-toggle="dropdown" class="nav-link dropdown-toggle" href="#">Crear<b class="caret"></b></a>
-				<ul class="dropdown-menu">
-					<li><a href="agregarLibro.html" class="dropdown-item">Libro</a></li>
-					<li><a href="#" class="dropdown-item">Revista</a></li>
-				</ul>
-			</li>
-			<li class="nav-item dropdown">
-				<a data-toggle="dropdown" class="nav-link dropdown-toggle" href="#">Cátalogo<b class="caret"></b></a>
-				<ul class="dropdown-menu">
-					<li><a href="#" class="dropdown-item">Carreras</a></li>
-					<li><a href="#" class="dropdown-item">Material extra</a></li>
-				</ul>
-			</li>
-		</ul>
-		<form class="navbar-form form-inline">
-			<div class="input-group search-box">
-				<input type="text" id="search" class="form-control" placeholder="Search by Name">
-				<span class="input-group-addon"><i class="material-icons">&#xE8B6;</i></span>
-			</div>
-		</form>
-		<ul class="nav navbar-nav navbar-right ml-auto">
-			<li class="nav-item"><a href="#" class="nav-link notifications"><i class="fas fa-user-cog"></i></i></a></li>
-			<li class="nav-item"><a href="#" class="nav-link messages"><i class="fas fa-user"></i></a></li>
-			<li class="nav-item dropdown">
-				<a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle user-action"><img src="https://www.tutorialrepublic.com/examples/images/avatar/2.jpg" class="avatar" alt="Avatar"> Paula Wilson <b class="caret"></b></a>
-				<ul class="dropdown-menu">
-					<li><a href="#" class="dropdown-item"><i class="fa fa-user-o"></i> Profile</a></li>
-					<li><a href="#" class="dropdown-item"><i class="fa fa-calendar-o"></i> Calendar</a></li>
-					<li><a href="#" class="dropdown-item"><i class="fa fa-sliders"></i> Settings</a></li>
-					<li class="divider dropdown-divider"></li>
-					<li><a href="#" class="dropdown-item"><i class="material-icons">&#xE8AC;</i> Logout</a></li>
-				</ul>
-			</li>
-		</ul>
-	</div>
+<nav class="navbar navbar-default navbar-expand-xl navbar-light">
+  <div class="navbar-header d-flex col">
+    <img src="../img/book.ico" alt="logo" style="width:30px;" class="logo">
+    <p class="biblioteca">Biblioteca Digital UTIM</p>
+    <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle navbar-toggler ml-auto">
+      <span class="navbar-toggler-icon"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+</button>
+</div>
+<!-- Collection of nav links, forms, and other content for toggling -->
+<div id="navbarCollapse" class="collapse navbar-collapse justify-content-start">
+<ul class="nav navbar-nav">
+  <li class="nav-item active"><a href="#" class="nav-link">Inicio</a></li>
+  <li class="nav-item dropdown">
+    <a data-toggle="dropdown" class="nav-link dropdown-toggle" href="#">Crear<b class="caret"></b></a>
+    <ul class="dropdown-menu">
+      <li><a href="registrarLibro.html" class="dropdown-item">Libro</a></li>
+      <li><a href="registrarRevista.html" class="dropdown-item">Revista</a></li>
+    </ul>
+  </li>
+  <li class="nav-item dropdown">
+    <a data-toggle="dropdown" class="nav-link dropdown-toggle" href="#">Cátalogo<b class="caret"></b></a>
+    <ul class="dropdown-menu">
+      <li><a href="#" class="dropdown-item">Carreras</a></li>
+      <li><a href="#" class="dropdown-item">Material extra</a></li>
+    </ul>
+  </li>
+</ul>
+<form class="navbar-form form-inline">
+  <div class="input-group search-box">
+    <input type="text" id="search" class="form-control" placeholder="Search by Name">
+    <span class="input-group-addon"><i class="material-icons">&#xE8B6;</i></span>
+  </div>
+</form>
+<ul class="nav navbar-nav navbar-right ml-auto">
+  <li class="nav-item dropdown">
+    <a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle user-action"><i class="fas fa-user"></i> Nombre Usuario <b class="caret"></b></a>
+    <ul class="dropdown-menu">
+      <li><a href="#" class="dropdown-item"><i class="fa fa-user-o"></i> Profile</a></li>
+      <li><a href="#" class="dropdown-item"><i class="fa fa-sliders"></i> Settings</a></li>
+      <li class="divider dropdown-divider"></li>
+      <li><a href="#" class="dropdown-item"><i class="material-icons">&#xE8AC;</i> Logout</a></li>
+    </ul>
+  </li>
+</ul>
+</div>
 </nav>
 
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="../js/popper.min.js"></script>
+<script src="../js/jquery-3.4.1.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
         </body>
 </html>
