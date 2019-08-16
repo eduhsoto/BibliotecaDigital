@@ -10,10 +10,17 @@ function iniciarSesionAdmin(){
       jsonp:"jsoncallback",
       crossDomain:true,
       success:function(resp){
-          if(resp.message=="right")
-              location.href ="../html/crudCatalogo.html";
-          else
+        if (resp.message == "empty") {
+          alert("Datos vacios, intentente de nuevo");
+        }else{
+          if( resp.message=="right"){
+            location.href ="../html/crudCatalogo.html";
+            }
+          else {
               alert("Usuario o contraseña incorrectos");
+                }
+        }
+
   }
   });
   document.getElementById("registroAdmin").reset();
@@ -96,29 +103,78 @@ function btnMostrarPersonal(){
 
 function registrarAlumno(){
   var matricula = document.getElementById("matriculas").value;
-  var nombreAlumno = document.getElementById("nombre").value;
-  var matricula = document.getElementById("matriculas").value;
-  var matricula = document.getElementById("matriculas").value;
-  var matricula = document.getElementById("matriculas").value;
-  var matricula = document.getElementById("matriculas").value;
-  var matricula = document.getElementById("matriculas").value;
-  var matricula = document.getElementById("matriculas").value;
-
+  var nombreAlumno = document.getElementById("nombreAl").value;
+  var apellidosAlumno = document.getElementById("apellidosAl").value;
+  var carrera = document.getElementById("carrera").value;
+  var cuatrimestre = document.getElementById("cuatrimestre").value;
+  var usuarioAlumno = document.getElementById("usuarioAl").value;
+  var passwordAlumno = document.getElementById("passwordAl").value;
+  var emailAlumno = document.getElementById("emailAl").value;
 
   $.ajax({
       type:"post",
-      url:"http://localhost/crudbiblioteca/iniciar_sesion_admin.php",
-      data:{phpuser:user,phppass:pass},
+      url:"http://localhost/crudbiblioteca/registrarAlumno.php",
+      data:{phpMatricula:matricula,phppnombreAlumno:nombreAlumno,
+        phpapellidoAlumno:apellidosAlumno,phpCarrera:carrera,phpCuatrimestre:cuatrimestre,
+        phpusuarioAlumno:usuarioAlumno,phppasswordAlumno:passwordAlumno,phpemail:emailAlumno},
       dataType:"jsonp",
       jsonp:"jsoncallback",
       crossDomain:true,
       success:function(resp){
-          if(resp.message=="right")
-              location.href ="../html/crudCatalogo.html";
-          else
-              alert("Usuario o contraseña incorrectos");
+        if (resp.message == "empty") {
+          alert("Datos vacios, intentente de nuevo");
+        }else{
+          if( resp.message=="right"){
+            alert("Datos registrados");
+            }
+          else {
+              alert("Fallo al registrar");
+                }
+        }
   }
   });
-  document.getElementById("registroAdmin").reset();
+  document.getElementById("registroFormAl").reset();
+  return false;
+}
+
+function registrarPersonal(){
+  //Obtener valores del select
+  var select = document.getElementById("tipopersonal");
+  //obtener el texto de la opcisón
+  //var opt = select.options[select.selectedIndex].text;
+  //obtener el valor de la opción
+  var tipoPersonal = select.options[select.selectedIndex].value;
+
+  var claveTrabajador = document.getElementById("claveTrabajador").value;
+  var nombrePersonal = document.getElementById("nombrePer").value;
+  var apellidoPersonal = document.getElementById("apellidoPer").value;
+  var areaAdscripcion = document.getElementById("areaAdscripcion").value;
+  var usuarioPersonal = document.getElementById("usuarioPer").value;
+  var passwordPersonal = document.getElementById("passwordPer").value;
+  var emailPersonal = document.getElementById("emailPer").value;
+
+  $.ajax({
+      type:"post",
+      url:"http://localhost/crudbiblioteca/registrarPersonal.php",
+      data:{phptipoPersonal:tipoPersonal,phpclaveTrabajador:claveTrabajador,phpnombrePersonal:nombrePersonal,
+        phpapellidoPersonal:apellidoPersonal,phpareaAdscripcion:areaAdscripcion,phpusuarioPersonal:usuarioPersonal,
+        phppasswordPersonal:passwordPersonal,phpemailPersonal:emailPersonal},
+      dataType:"jsonp",
+      jsonp:"jsoncallback",
+      crossDomain:true,
+      success:function(resp){
+        if (resp.message == "empty") {
+          alert("Datos vacios, intentente de nuevo");
+        }else{
+          if( resp.message=="right"){
+            alert("Datos registrados");
+            }
+          else {
+              alert("Fallo al registrar");
+                }
+        }
+  }
+  });
+  document.getElementById("registroFormPersonal").reset();
   return false;
 }
