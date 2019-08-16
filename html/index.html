@@ -2,21 +2,21 @@
 <html lang="en" >
   <head>
     <meta charset="utf-8">
+    <!-- configuración de la pagina adptablea dispósitivo móvil -->
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <title>Biblioteca digital</title>
+    <!-- iconos -->
     <link rel="stylesheet" href="../css/fontawesome/css/all.css" rel="stylesheet">
-
+    <!-- Mantener es estilo en cualquier navegador y evitar que pongan los suyos -->
     <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
-
+    <!-- funciones necesarias -->
     <script src="../js/index.js"></script>
-
+    <!-- boostrap -->
     <link rel="stylesheet" href="../css/bootstrap.min.css">
-
+    <!-- estilos propios-->
     <link rel="stylesheet" href="../css/estilo.css">
-
   </head>
   <body >
-
 <!-- Barra de menú -->
     <nav class="navbar navbar-default navbar-expand-xl navbar-light fixed-top">
       <div class="navbar-header d-flex col">
@@ -26,6 +26,7 @@
     </nav>
     <!-- Imagen  -->
         <header class="header">
+          <!-- color -->
           <div class="color">
           </div>
         </header>
@@ -81,22 +82,22 @@
       </div>
       <div class="modal-body">
         <div class="tab-content">
-          <!-- Registro para alumnos -->
+          <!-- Registro alumnos -->
           <div id="alumnos" class="tab-pane show in active">
-            <form class="" action="" method="">
+            <form class="" action="" method="" id="registroFormAl">
               <div class="form-group">
                 <label class="sr-only" for="matriculas" >Matricula</label>
                 <input class="form-control" type="text" id="matriculas" placeholder="Matricula">
               </div>
 
               <div class="form-group">
-                <label class="sr-only" for="nombre" >Nombre</label>
-                <input class="form-control" type="text" id="nombre" placeholder="Nombre">
+                <label class="sr-only" for="nombreAl" >Nombre</label>
+                <input class="form-control" type="text" id="nombreAl" placeholder="Nombre">
               </div>
 
               <div class="form-group">
-                <label class="sr-only" for="apellidos" >Apellidos</label>
-                <input class="form-control" type="text" id="apellidos" placeholder="Apellidos">
+                <label class="sr-only" for="apellidosAl" >Apellidos</label>
+                <input class="form-control" type="text" id="apellidosAl" placeholder="Apellidos">
               </div>
 
               <div class="form-group">
@@ -110,29 +111,29 @@
               </div>
 
               <div class="form-group">
-                <label class="sr-only" for="usuario" >Usuario</label>
-                <input class="form-control" type="text" id="usuario" placeholder="Usuario">
+                <label class="sr-only" for="usuarioAl" >Usuario</label>
+                <input class="form-control" type="text" id="usuarioAl" placeholder="Usuario">
               </div>
 
               <div class="form-group">
-                <label class="sr-only" for="password" >Contraseña</label>
-                <input class="form-control" type="password" id="password" placeholder="Contraseña">
+                <label class="sr-only" for="passwordAl" >Contraseña</label>
+                <input class="form-control" type="password" id="passwordAl" placeholder="Contraseña">
               </div>
 
               <div class="form-group">
-                <label class="sr-only" for="email" >E-mail</label>
-                <input class="form-control" type="email" id="email" placeholder="E-mail">
+                <label class="sr-only" for="emailAl" >e-mail</label>
+                <input class="form-control" type="email" id="emailAl" placeholder="E-mail">
               </div>
 
               <div class="form-group">
-                <button type="button" name="button" class="form-control btn btn-success">Registrar</button>
+                <button type="button" name="button" class="form-control btn btn-success" onclick="registrarAlumno();">Registrar</button>
               </div>
             </form>
           </div>
 
 <!-- Registro para personal de la utim -->
           <div id="personal" class="tab-pane fade">
-            <form class="" action="" method="post">
+            <form class="" action="" method="post" id="registroFormPersonal">
 
               <div class="form-group">
                 <select class="form-control" name="tipo_usuario" id="tipopersonal">
@@ -141,7 +142,7 @@
 
               <div class="form-group">
                 <label class="sr-only" for="clave_trabajador" >Clave trabajador</label>
-                <input class="form-control" type="text" id="clave_trabajador" placeholder="Clave trabajador">
+                <input class="form-control" type="text" id="claveTrabajador" placeholder="Clave trabajador">
               </div>
 
               <div class="form-group">
@@ -156,7 +157,7 @@
 
               <div class="form-group">
                 <label class="sr-only" for="area_adscripcion" >Área adscripción</label>
-                <input class="form-control" type="text" id="area_adscripcion" placeholder="Área adscripción">
+                <input class="form-control" type="text" id="areaAdscripcion" placeholder="Área adscripción">
               </div>
 
               <div class="form-group">
@@ -175,7 +176,7 @@
               </div>
 
               <div class="form-group">
-                <button type="button" name="button" class="form-control btn btn-success">Registrar</button>
+                <button type="button" name="button" class="form-control btn btn-success" onclick="registrarPersonal();">Registrar</button>
               </div>
             </form>
 
@@ -199,7 +200,7 @@
       <div class="modal-header" id="tabs">
         <ul class="nav nav-tabs nav-fill">
           <li class="nav-item">
-            <a class="nav-link active" href="#administradorAP" data-toggle="tab" >Bienvenido</a>
+            <a class="nav-link active" href="#administradorAP" data-toggle="tab" >Administrador</a>
           </li>
         </ul>
         <button type="button" class="close " data-dismiss="modal" aria-label="Close">
@@ -208,7 +209,7 @@
       </div>
       <div class="modal-body">
         <div class="tab-content">
-          <!-- Registro para alumnos -->
+          <!-- Registro administrador -->
           <div id="administradorAP" class="tab-pane show in active">
             <form class="" action="" method="" id="registroAdmin">
               <div class="form-group">
@@ -221,7 +222,6 @@
                 <input class="form-control" type="password" id="passwordAdm" placeholder="Contraseña">
               </div>
               <div class="form-group">
-                <!--<a href="javascript:void(0)" id="btnRegistrar"  onclick="iniciarSesionAdmin();">Registrar</a>-->
                 <button type="button" name="button" class="form-control btn btn-success" onclick="iniciarSesionAdmin();">Ingresar</button>
               </div>
             </form>
