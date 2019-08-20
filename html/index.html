@@ -44,15 +44,20 @@
 
             <div class="form-group">
               <label class="sr-only" for="nomUsuario" >Usuario</label>
-              <input class="form-control" type="text" id="nomUsuario" placeholder="Usuario">
+              <input class="form-control" type="text" id="nomUsuario" placeholder="Usuario" onkeypress="return checkLetterNumber(event)">
             </div>
 
             <div class="form-group">
               <label class="sr-only" for="password" >Contraseña</label>
-              <input class="form-control" type="password" id="nompassword" placeholder="Contraseña">
+              <input class="form-control" type="password" id="nompassword" placeholder="Contraseña" onkeypress="return checkLetterNumber(event)">
             </div>
+
             <div class="form-group">
               <button type="button" name="button" class="form-control btn btn-success" onclick="iniciarSesionPersonal();">Ingresar</button>
+            </div>
+
+            <div class="form-group">
+              <input type="submit" name="button" value="Ingresar" class="form-control btn btn-success" onclick="iniciarSesionPersonal();">
             </div>
 
             <div class="form-group">
@@ -87,17 +92,17 @@
             <form class="" action="" method="" id="registroFormAl">
               <div class="form-group">
                 <label class="sr-only" for="matriculas" >Matricula</label>
-                <input class="form-control" type="text" id="matriculas" placeholder="Matricula">
+                <input class="form-control" type="text" id="matriculas" placeholder="Matricula" onkeypress="return checkNumber(event)">
               </div>
 
               <div class="form-group">
                 <label class="sr-only" for="nombreAl" >Nombre</label>
-                <input class="form-control" type="text" id="nombreAl" placeholder="Nombre">
+                <input class="form-control" type="text" id="nombreAl" placeholder="Nombre" onkeypress="return checkLetter(event)">
               </div>
 
               <div class="form-group">
                 <label class="sr-only" for="apellidosAl" >Apellidos</label>
-                <input class="form-control" type="text" id="apellidosAl" placeholder="Apellidos">
+                <input class="form-control" type="text" id="apellidosAl" placeholder="Apellidos" onkeypress="return check(event)">
               </div>
 
               <div class="form-group">
@@ -127,6 +132,10 @@
 
               <div class="form-group">
                 <button type="button" name="button" class="form-control btn btn-success" onclick="registrarAlumno();">Registrar</button>
+              </div>
+
+              <div class="form-group">
+                <input type="submit" name="button" value="Registrar" class="form-control btn btn-success" onclick="registrarAlumno();">
               </div>
             </form>
           </div>
@@ -214,7 +223,7 @@
             <form class="" action="" method="" id="registroAdmin">
               <div class="form-group">
                 <label class="sr-only" for="usuarioAdm" >Usuario</label>
-                <input class="form-control" type="text" id="usuarioAdm" placeholder="Usuario">
+                <input class="form-control" type="text" id="usuarioAdm" placeholder="Usuario" onkeypress="return check(event)">
               </div>
 
               <div class="form-group">

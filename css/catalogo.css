@@ -15,12 +15,11 @@ font-weight: bold;
 
 /* Posisición del formulario*/
 .container{
+	padding: 30px;
   position: absolute;
-  margin-top: 160px;
   left: 50%;
   transform: translate(-50%);
   box-sizing: border-box
-  padding: 30px;
 
 }
 
@@ -32,13 +31,13 @@ font-weight: bold;
 }
 
 .cabecera{
-  position: absolute;
-  margin-top: 2%;
+	width: 80%;
+  position: relative;
+  margin-top: 50px;
   left: 50%;
   transform: translate(-50%);
   box-sizing: border-box
   padding: 30px;
-	/*width: 150px;*/
 
 }
 

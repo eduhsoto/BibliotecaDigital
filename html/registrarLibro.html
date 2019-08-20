@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="../css/catalogo.css">
   </head>
   <body>
-    <nav class="navbar navbar-default navbar-expand-xl navbar-light">
+    <nav class="navbar navbar-default navbar-expand-xl navbar-dark">
       <div class="navbar-header d-flex col">
         <img src="../img/book.ico" alt="logo" style="width:30px;" class="logo">
         <p class="biblioteca">Biblioteca Digital UTIM</p>
@@ -71,30 +71,30 @@
 </div>
 
 <div class="container">
-  <form  action="" method="" class="form-container">
+  <form  action="" method="" class="form-container" id="registrarLibros">
     <div class="form-group">
-      <label class="sr-only" for="titulo" >Título</label>
-      <input class="form-control" type="text" id="titulo" placeholder="Título">
+      <label class="sr-only" for="tituloLibro" >Título</label>
+      <input class="form-control" type="text" id="tituloLibro" placeholder="Título">
     </div>
 
     <div class="form-group">
-      <label class="sr-only" for="editorial" >Editorial</label>
-      <input class="form-control" type="text" id="editorial" placeholder="Editorial">
+      <label class="sr-only" for="editorialLibro">Editorial</label>
+      <input class="form-control" type="text" id="editorialLibro" placeholder="Editorial">
     </div>
 
     <div class="form-group">
-      <label class="sr-only" for="autor" >Autor</label>
-      <input class="form-control" type="text" id="autor" placeholder="Autor">
+      <label class="sr-only" for="autorLibro" >Autor</label>
+      <input class="form-control" type="text" id="autorLibro" placeholder="Autor">
     </div>
 
     <div class="form-group">
-      <label class="sr-only" for="noEdicion" >Número de edición</label>
-      <input class="form-control" type="text" id="noEdicion" placeholder="Número de edición">
+      <label class="sr-only" for="noEdicionLibro" >Número de edición</label>
+      <input class="form-control" type="text" id="noEdicionLibro" placeholder="Número de edición">
     </div>
 
     <div class="form-group">
-      <label class="sr-only" for="noPaginas" >Número de páginas</label>
-      <input class="form-control" type="number" id="noPaginas" placeholder="Número de páginas">
+      <label class="sr-only" for="noPaginasLibro" >Número de páginas</label>
+      <input class="form-control" type="number" id="noPaginasLibro" placeholder="Número de páginas">
     </div>
 
     <div class="form-group">
@@ -103,8 +103,7 @@
     </div>
 
     <div class="form-group">
-      <select class="" name="" class="form-control">
-        <option value="" selected="selected">Tipo de solicitud</option>
+      <select class="form-control" name="tipo_solicitud" id="tipoSolicitud">
       </select>
     </div>
 
@@ -114,14 +113,12 @@
     </div>
 
     <div class="form-group">
-      <select class="" name="" class="form-control">
-        <option value="" selected="selected">Tipo de cátalogo</option>
+      <select class="form-control" name="" id="tipoLibro">
       </select>
     </div>
 
     <div class="form-group">
-      <select class="" name="" class="">
-        <option value="" selected="selected">Tipo de libro</option>
+      <select  name="" class="form-control" id="tipoCatalogo">
       </select>
     </div>
 
@@ -130,6 +127,13 @@
     </div>
   </form>
 </div>
+<script type="text/javascript">
+window.onload = function() {
+mostrarSolicitud();
+mostrartipoCatalogo();
+mostrartipoLibro();
+};
+</script>
 <script src="../js/popper.min.js"></script>
 <script src="../js/jquery-3.4.1.min.js"></script>
 <script src="../js/bootstrap.min.js"></script>
