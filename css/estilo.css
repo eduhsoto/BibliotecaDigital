@@ -1,0 +1,153 @@
+body {
+  margin: 0;
+  padding: 0;
+
+}
+/* Cuerpo de la pagina */
+.header{
+  background-image: url(../img/UTIM.jpg);
+  background-size: cover;
+  -webkit-background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100%;
+  background-position: center center;
+  filter: blur(5px);
+}
+
+/* filtro */
+.color{
+  background: #000;
+  opacity: .6;
+  width: 100%;
+  height: 100%;
+}
+
+/* Estilo del formulario de inicio */
+.container{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  box-sizing: border-box
+  padding: 30px;
+}
+
+/* texto */
+p{
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+h3{
+  color: white;
+  font-weight: bold;
+}
+
+.nuevo{
+  color: white;
+}
+
+/* transparencia del formulario */
+.form-container{
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 30px;
+}
+
+/* Botonones */
+.btn-success {
+    color: #fff;
+    background-color: #14A696;
+    border-color: #14A696;
+}
+
+.btn-success:hover {
+    color: #fff;
+    background-color: #14A696;
+    border-color: #14A696;
+}
+
+
+.btn{
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.close:hover {
+    color: #fff;
+}
+
+.close {
+    color: #fff;
+    opacity: 1;
+}
+/* Color de texto del enlace "Crear cuenta" */
+#butt{
+  color: #14A696;
+}
+
+/*logo */
+
+	.navbar {
+		border-bottom: 1px solid #d6d6d6;
+	}
+
+  .biblioteca{
+  margin: auto;
+  color: white;
+  margin-left: 1%;
+  letter-spacing: 1px;
+  font-size: 100%;
+  text-transform: uppercase;
+  font-weight: bold;
+  }
+
+
+	.navbar-header.col {
+		padding: 0 !important;
+	}
+
+/* icon */
+.adminicon{
+  color: white;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+
+}
+
+.{
+  background-color: red;
+}
+
+/* Tabs */
+#tabs .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+    color: #f3f3f3;
+    background-color: transparent;
+    border-bottom: 2px solid !important;
+    font-size: 20px;
+    font-weight: bold;
+}
+#tabs .nav-tabs .nav-link {
+    border: 1px solid transparent;
+    border-top-left-radius: .25rem;
+    border-top-right-radius: .25rem;
+    color: #eee;
+    font-size: 20px;
+
+}
+
+#tabs {
+  background-color: #4F94CA;
+}
+
+ .nav-tabs {
+  border: none;
+}
+
+.tab-content{
+    border: 1px solid #ddd;
+    padding:30px 25px;
+}

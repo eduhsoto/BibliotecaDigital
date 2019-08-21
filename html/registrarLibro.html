@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en" >
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Crud catalogo</title>
+    <link rel="stylesheet" href="../css/fontawesome/css/all.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+
+    <script src="../js/index.js"></script>
+
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="../css/catalogo.css">
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-expand-xl navbar-dark">
+      <div class="navbar-header d-flex col">
+        <img src="../img/book.ico" alt="logo" style="width:30px;" class="logo">
+        <p class="biblioteca">Biblioteca Digital UTIM</p>
+        <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle navbar-toggler ml-auto">
+          <span class="navbar-toggler-icon"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+    </button>
+    </div>
+    <!-- Collection of nav links, forms, and other content for toggling -->
+    <div id="navbarCollapse" class="collapse navbar-collapse justify-content-start">
+    <ul class="nav navbar-nav">
+      <li class="nav-item active"><a href="crudCatalogo.html" class="nav-link">Inicio</a></li>
+      <li class="nav-item dropdown">
+        <a data-toggle="dropdown" class="nav-link dropdown-toggle" href="#">Crear<b class="caret"></b></a>
+        <ul class="dropdown-menu">
+          <li><a href="registrarLibro.html" class="dropdown-item">Libro</a></li>
+          <li><a href="registrarRevista.html" class="dropdown-item">Revista</a></li>
+        </ul>
+      </li>
+      <li class="nav-item dropdown">
+        <a data-toggle="dropdown" class="nav-link dropdown-toggle" href="#">Cátalogo<b class="caret"></b></a>
+        <ul class="dropdown-menu">
+          <li><a href="#" class="dropdown-item">Carreras</a></li>
+          <li><a href="#" class="dropdown-item">Material extra</a></li>
+        </ul>
+      </li>
+    </ul>
+    <form class="navbar-form form-inline">
+      <div class="input-group search-box">
+        <input type="text" id="search" class="form-control" placeholder="Search by Name">
+        <span class="input-group-addon"><i class="material-icons">&#xE8B6;</i></span>
+      </div>
+    </form>
+    <ul class="nav navbar-nav navbar-right ml-auto">
+      <li class="nav-item dropdown">
+        <a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle user-action"><i class="fas fa-user"></i> Nombre Usuario <b class="caret"></b></a>
+        <ul class="dropdown-menu">
+          <li><a href="#" class="dropdown-item"><i class="fa fa-user-o"></i> Profile</a></li>
+          <li><a href="#" class="dropdown-item"><i class="fa fa-sliders"></i> Settings</a></li>
+          <li class="divider dropdown-divider"></li>
+          <li><a href="#" class="dropdown-item"><i class="material-icons">&#xE8AC;</i> Logout</a></li>
+        </ul>
+      </li>
+    </ul>
+    </div>
+    </nav>
+
+<div class="cabecera">
+  <h4>Registrar libro</h4>
+</div>
+
+<div class="container">
+  <form  action="" method="" class="form-container" id="registrarLibros" enctype="multipart/form-data">
+    <div class="form-group">
+      <label class="sr-only" for="tituloLibro" >Título</label>
+      <input class="form-control" type="text" id="tituloLibro" placeholder="Título" onkeypress="return checkLetter(event)">
+    </div>
+
+    <div class="form-group">
+      <label class="sr-only" for="editorialLibro">Editorial</label>
+      <input class="form-control" type="text" id="editorialLibro" placeholder="Editorial" onkeypress="return checkLetter(event)">
+    </div>
+
+    <div class="form-group">
+      <label class="sr-only" for="autorLibro" >Autor</label>
+      <input class="form-control" type="text" id="autorLibro" placeholder="Autor" onkeypress="return checkLetter(event)">
+    </div>
+
+    <div class="form-group">
+      <label class="sr-only" for="noEdicionLibro" >Número de edición</label>
+      <input class="form-control" type="number" id="noEdicionLibro" placeholder="Número de edición">
+    </div>
+
+    <div class="form-group">
+      <label class="sr-only" for="noPaginasLibro" >Número de páginas</label>
+      <input class="form-control" type="number" id="noPaginasLibro" placeholder="Número de páginas">
+    </div>
+
+    <div class="form-group">
+      <label class="sr-only" for="librosDisponibles" >Libros disponibles</label>
+      <input class="form-control" type="number" id="librosDisponibles" placeholder="Libros disponibles">
+    </div>
+
+    <div class="form-group">
+      <select class="form-control" name="tipo_solicitud" id="tipoSolicitud">
+      </select>
+    </div>
+
+    <div class="form-group">
+      <span class="text-muted">Portada de libro</span>
+      <input class="form-control" type="file" id="portadaLibro" >
+    </div>
+
+    <div class="form-group">
+      <span class="text-muted">Detalles</span>
+      <input class="form-control" type="file" id="detalles" placeholder="Detalles">
+    </div>
+
+    <div class="form-group">
+      <select class="form-control" name="" id="tipoLibro">
+      </select>
+    </div>
+
+    <div class="form-group">
+      <select  name="" class="form-control" id="tipoCatalogo" onchange="seleccionarCarrera();">
+      </select>
+    </div>
+
+    <div class="form-group" >
+      <select  name="" class="form-control" id="tipoArea">
+      </select>
+    </div>
+
+    <div class="form-group">
+      <button type="button" name="button" class="form-control btn btn-success">Registrar</button>
+    </div>
+  </form>
+</div>
+<script type="text/javascript">
+window.onload = function() {
+mostrarSolicitud();
+mostrartipoCatalogo();
+mostrartipoLibro();
+mostrarCarreras();
+}
+
+</script>
+<script src="../js/popper.min.js"></script>
+<script src="../js/jquery-3.4.1.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+        </body>
+</html>
